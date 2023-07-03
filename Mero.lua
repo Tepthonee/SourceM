@@ -73,7 +73,7 @@ UserBot = Information.UserBot
 TheMero = Token:match("(%d+)")
 os.execute('sudo rm -fr .CallBack-Bot/'..TheMero)
 bot = luatele.set_config{api_id=7835273,api_hash='c7706de6b4ee7e371dfaaaa2b285c351',session_name=TheMero,token=Token}
-Bot_Name = (Redis:get(TheMero.."Mero:Name:Bot") or "ريما")
+Bot_Name = (Redis:get(TheMero.."Mero:Name:Bot") or "محمد")
 function var(value)  
 print(serpent.block(value, {comment=false}))   
 end 
@@ -18780,7 +18780,7 @@ if ChannelJoin(msg) == false then
 local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(TheMero..'Mero:Channel:Join:Name'), url = 't.me/'..Redis:get(TheMero..'Mero:Channel:Join')}, },}}
 return send(msg.chat_id,msg.id,'\n• عليك الاشتراك في قناة البوت لاستخدام الاوامر',"md",false, false, false, false, reply_markup)
 end
-local Text ="- أهلاً بك في سورس ريما ."
+local Text ="- أهلاً بك في سورس محمد ."
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -18819,7 +18819,7 @@ data = {
 }
 }
 return send(msg_chat_id,msg_id, [[
-*⤶ اهلين فيك بـ أوامر ريما
+*⤶ اهلين فيك بـ أوامر محمد
 
 𝟏 ↢ اوامر الادارة 
 𝟐 ↢ اوامر الاعدادات
@@ -22418,7 +22418,7 @@ Redis:set(TheMero.."keyboardmemb"..msg.sender_id.user_id,true)
 Redis:sadd(TheMero..'Mero:Num:User:Pv',msg.sender_id.user_id)
 if not msg.ControllerBot then
 if not Redis:get(TheMero.."Mero:Start:Bot") then
-local CmdStart = '\n↤ أهلين فيك ياحلو انا بوت اسمي '..(Redis:get(TheMero.."Mero:Name:Bot") or "ريما")..
+local CmdStart = '\n↤ أهلين فيك ياحلو انا بوت اسمي '..(Redis:get(TheMero.."Mero:Name:Bot") or "محمد")..
 '\n↤ اختصاصي حماية قروبك\n↤ بعض من مميزاتي ♡.\n{ العاب مثل  كلمات والخ .. ، تيك ، صراحه ، يوتيوب ، افتاري ،  يمديك تستكشف اوامري من خلال الاوامر أو من تحديثات البوت ↤ @Tepthon .'..
 '\n• مطور البوت ↤ [@'..UserSudo..']'
 local reply_markupp = bot.replyMarkup{
