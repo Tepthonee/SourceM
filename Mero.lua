@@ -17853,6 +17853,11 @@ return send(msg_chat_id,msg_id,[[
 - اضغط على الاختصار للنسخ .
 ]],"md",true)    
 end 
+if text and text:match("^محمد (.*)$") then
+local TextName = text:match("^محمد (.*)$")
+local gptchatt = request("https://www.hmss.store/api/chat.php/index.php?text="..URL.escape(TextName))
+send(msg_chat_id,msg_id,gptchatt,"md",true)
+end
 if text and text:match("^مسح (.*)$") and msg.reply_to_message_id == 0 then
 local TextMsg = text:match("^مسح (.*)$")
 if TextMsg == 'المطورين الثانوين' or TextMsg == 'قائمه MY' then
