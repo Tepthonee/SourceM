@@ -105,7 +105,7 @@ end
 end
 end
 -----
-local txt = '↢ من 「 ['..UserInfo.first_name..'](tg://user?id='..who_promot..')⁪⁬‌‌‌‌ 」\n↢ تم تفعيل المجموعة ['..Get_Chat.title..']('..Info_Chats.invite_link.invite_link..') تلقائياً\n\n↢ ارسل /Commands لعرض اوامر البوت'
+local txt = '↢ من 「 ['..UserInfo.first_name..'](tg://user?id='..who_promot..')⁪⁬‌‌‌‌ 」\n↢ تم تفعيل المجموعة ['..Get_Chat.title..']('..Info_Chats.invite_link.invite_link..') تلقائياً\n\n↢ أرسل /Commands لعرض اوامر البوت'
 local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
@@ -1510,7 +1510,7 @@ if Text and Text:match('(%d+)/zeng') then
   local UserId = Text:match('(%d+)/zeng')
   if tonumber(UserId) == tonumber(IdUser) then
     Redis:set(TheMero..ChatId..IdUser.."zkrf:", "zeng")
-    edit(ChatId, Msg_id, "𖦹 ارسل لي الكلمة لزخرفتها", "md",false)
+    edit(ChatId, Msg_id, "𖦹 أرسل لي الكلمة لزخرفتها", "md",false)
   end
   end
   if Text and Text:match('(.*)/yes_zw/(.*)') then
@@ -2385,7 +2385,7 @@ end
 if Text and Text:match('/ChangeChannelVip:'..tonumber(IdUser)..'(.*)') then
 local UserId = Text:match('/ChangeChannelVip:'..tonumber(IdUser)..'(.*)')
 Redis:set(TheMero..'SetChannelVip'..IdUser,true)
-local Text = "↢ ارسل لي قناتك الان"
+local Text = "↢ أرسل لي قناتك الان"
 local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
@@ -6608,19 +6608,19 @@ if Text and Text:match('(%d+)/Zhrfaar') then
 local UserId = Text:match('(%d+)/Zhrfaar')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:setex(TheMero..":ZhrfNow:ar"..UserId,500,true)
-bot.editMessageText(ChatId,Msg_id,"↢ ارسل الاسم بالعربي", 'md', false)
+bot.editMessageText(ChatId,Msg_id,"↢ أرسل الاسم بالعربي", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Zhrfinlin') then
 local UserId = Text:match('(%d+)/Zhrfinlin')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:setex(TheMero..":Zhrfinlin:en"..UserId,500,true)
-bot.editMessageText(ChatId,Msg_id,"↢ ارسل الاسم بالانكليزي", 'md', false)
+bot.editMessageText(ChatId,Msg_id,"↢ أرسل الاسم بالانكليزي", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Zhrfaen') then
 local UserId = Text:match('(%d+)/Zhrfaen')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:setex(TheMero..":ZhrfNow:en"..UserId,500,true)
-bot.editMessageText(ChatId,Msg_id,"↢ ارسل الاسم بالانكليزي", 'md', false)
+bot.editMessageText(ChatId,Msg_id,"↢ أرسل الاسم بالانكليزي", 'md', false)
 end
 end
 
