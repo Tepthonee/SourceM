@@ -8168,7 +8168,7 @@ local TextHelp = [[
 𝟓 ↢ اوامر الترفية
 𝟔 ↢ اوامر الالعاب
 
-⌯ Master* [Mohammad](T.me/K_Y_7)
+⌯ Master* [Mohammad](T.me/PPF22)
 ]]
 edit(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
 end
